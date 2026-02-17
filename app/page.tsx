@@ -7,7 +7,7 @@ import Header from "@/components/Header";
 import InputForm from "@/components/InputForm";
 import Results from "@/components/Results";
 import DisclosureNote from "@/components/DisclosureNote";
-
+import Hero from "@/components/Hero";
 // ─── Default state ───────────────────────────────────────────────────────────
 
 const today = new Date().toISOString().slice(0, 10);
@@ -79,6 +79,7 @@ export default function HomePage() {
       <Header />
 
       <main className="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 py-6">
+      <Hero />
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
           {/* Input Panel */}
           <div className="lg:col-span-5">
