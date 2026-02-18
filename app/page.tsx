@@ -77,35 +77,81 @@ export default function HomePage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-
+  
       <main className="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 py-6">
-      <Hero />
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-          {/* Input Panel */}
-          <div className="lg:col-span-5">
-            <InputForm
-              inputs={inputs}
-              horizonSelect={horizonSelect}
-              customHorizon={customHorizon}
-              onChange={handleChange}
-              onHorizonSelectChange={handleHorizonSelect}
-              onCustomHorizonChange={handleCustomHorizon}
-            />
+        <Hero />
+  
+        {/* ✅ スクロールの着地点（空div） */}
+        <div id="simulator" className="scroll-mt-40" />
+  
+        <section className="mt-0">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            {/* Input Panel */}
+            <div className="lg:col-span-5">
+              <InputForm
+                inputs={inputs}
+                horizonSelect={horizonSelect}
+                customHorizon={customHorizon}
+                onChange={handleChange}
+                onHorizonSelectChange={handleHorizonSelect}
+                onCustomHorizonChange={handleCustomHorizon}
+              />
+            </div>
+  
+            {/* Results Panel */}
+            <div className="lg:col-span-7">
+              <Results inputs={inputs} result={result} />
+            </div>
           </div>
+  
+          {/* ✅ LINE CTA（ページ下） */}
+          <div className="mt-10 rounded-2xl border border-white/10 bg-white/5 p-6">
+            <h3 className="text-lg font-semibold text-white">この数字を実現したい方へ</h3>
+            <p className="mt-2 text-sm text-slate-200/80">
+              無料で、ビジネスとしての取り組み方・集客方法までお伝えします。
+            </p>
+  
+            <div className="mt-4 flex flex-col gap-3 sm:flex-row">
+              <a
+                href="https://lin.ee/tU2tSZz"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 px-8 py-4 text-sm font-semibold text-white shadow-lg hover:opacity-90 transition"
+              >
+                無料で相談する →
+              </a>
+  
+            
+            </div>
+  
+            <div className="mt-3 text-xs text-slate-200/60">
+              ※これは投資の勧誘ではなく、事業設計の検証用シミュレーションです。
+            </div>
+          </div>
+        </section>
+        {/* ✅ ページ最下部 LINE CTA */}
+<div className="mt-12 rounded-2xl border border-white/10 bg-white/5 p-6">
+  <h3 className="text-lg font-semibold text-white">無料で相談したい方はこちら</h3>
+  <p className="mt-2 text-sm text-slate-200/80">
+    あなたの状況に合わせて、取り組み方・集客の考え方を整理してお伝えします。
+  </p>
 
-          {/* Results Panel */}
-          <div className="lg:col-span-7">
-            <Results inputs={inputs} result={result} />
-          </div>
-        </div>
+  <div className="mt-4">
+    <a
+      href="https://lin.ee/tU2tSZz"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 px-8 py-4 text-sm font-semibold text-white shadow-lg hover:opacity-90 transition"
+    >
+      LINEで無料相談する →
+    </a>
+  </div>
+
+  <div className="mt-3 text-xs text-slate-200/60">
+    ※これは投資の勧誘ではなく、事業設計の検討用シミュレーションです。
+  </div>
+</div>
       </main>
-
-      {/* Footer */}
-      <footer className="border-t border-slate-800/60 mt-auto">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4">
-          <DisclosureNote compact />
-        </div>
-      </footer>
     </div>
   );
 }

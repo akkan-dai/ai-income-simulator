@@ -1,13 +1,6 @@
 "use client";
 
 export default function Hero() {
-  const scrollToSimulator = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    document
-      .getElementById("simulator")
-      ?.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
-
   return (
     <section className="relative overflow-hidden py-10">
       {/* Background glow */}
@@ -37,8 +30,8 @@ export default function Hero() {
               <strong>“事業設計”</strong>です。数字で理解し、あなたの行動（集客・紹介）で回収スピードを上げる導線を用意します。
             </p>
 
-            {/* CTAs (Hero内で確実に見せる) */}
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            {/* LINE CTA */}
+            <div className="mt-8">
               <a
                 href="https://lin.ee/tU2tSZz"
                 target="_blank"
@@ -47,48 +40,25 @@ export default function Hero() {
               >
                 LINEで無料相談する →
               </a>
-
-              <a
-                href="#simulator"
-                onClick={scrollToSimulator}
-                className="inline-flex items-center justify-center rounded-xl bg-white px-6 py-3 text-sm font-semibold text-slate-900 hover:bg-white/90"
-              >
-                シミュレーターへ移動 →
-              </a>
-
-              <a
-                href="#guide"
-                className="inline-flex items-center justify-center rounded-xl border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10"
-              >
-                事業の全体像を見る
-              </a>
             </div>
 
             {/* Key points */}
             <ul className="mt-6 grid gap-3 text-sm text-slate-200/90 sm:grid-cols-2">
               <li className="rounded-xl border border-white/10 bg-white/5 p-3">
                 <div className="font-medium text-white">D360で設計</div>
-                <div className="mt-1 text-slate-200/80">
-                  長期運用前提で“回収→拡大”を可視化
-                </div>
+                <div className="mt-1 text-slate-200/80">長期運用前提で“回収→拡大”を可視化</div>
               </li>
               <li className="rounded-xl border border-white/10 bg-white/5 p-3">
                 <div className="font-medium text-white">3000ドルが起点</div>
-                <div className="mt-1 text-slate-200/80">
-                  初期投資の基準を明確にする
-                </div>
+                <div className="mt-1 text-slate-200/80">初期投資の基準を明確にする</div>
               </li>
               <li className="rounded-xl border border-white/10 bg-white/5 p-3">
                 <div className="font-medium text-white">バーチャルカード</div>
-                <div className="mt-1 text-slate-200/80">
-                  リターンを生活で使う体験へ
-                </div>
+                <div className="mt-1 text-slate-200/80">リターンを生活で使う体験へ</div>
               </li>
               <li className="rounded-xl border border-white/10 bg-white/5 p-3">
                 <div className="font-medium text-white">紹介で加速</div>
-                <div className="mt-1 text-slate-200/80">
-                  “集客×チーム”で回収速度を上げる
-                </div>
+                <div className="mt-1 text-slate-200/80">“集客×チーム”で回収速度を上げる</div>
               </li>
             </ul>
 
