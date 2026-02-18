@@ -104,30 +104,7 @@ export default function HomePage() {
             </div>
           </div>
   
-          {/* ✅ LINE CTA（ページ下） */}
-          <div className="mt-10 rounded-2xl border border-white/10 bg-white/5 p-6">
-            <h3 className="text-lg font-semibold text-white">この数字を実現したい方へ</h3>
-            <p className="mt-2 text-sm text-slate-200/80">
-              無料で、ビジネスとしての取り組み方・集客方法までお伝えします。
-            </p>
-  
-            <div className="mt-4 flex flex-col gap-3 sm:flex-row">
-              <a
-                href="https://lin.ee/tU2tSZz"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 px-8 py-4 text-sm font-semibold text-white shadow-lg hover:opacity-90 transition"
-              >
-                無料で相談する →
-              </a>
-  
-            
-            </div>
-  
-            <div className="mt-3 text-xs text-slate-200/60">
-              ※これは投資の勧誘ではなく、事業設計の検証用シミュレーションです。
-            </div>
-          </div>
+         
         </section>
         {/* ✅ ページ最下部 LINE CTA */}
 <div className="mt-12 rounded-2xl border border-white/10 bg-white/5 p-6">
